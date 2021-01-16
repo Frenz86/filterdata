@@ -34,9 +34,8 @@ def df_filter(message,df):
 
         return filtered_df
 
-if __name__ == '__main__':
-
-    df = pd.read_csv('file_path')
+def main():
+    df = pd.read_csv('data.csv')
 
     st.title('Datetime Filter')
     filtered_df = df_filter('Move sliders to filter dataframe',df)
@@ -53,3 +52,9 @@ if __name__ == '__main__':
 
     st.markdown(download_csv('Filtered Data Frame',filtered_df),unsafe_allow_html=True)
     
+###########################################
+
+if __name__ == '__main__':
+    main()
+
+
